@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Iris Classification Results</title>
+    <style>
+      /* Add CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .results {
+        width: 400px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+
+      .label {
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .value {
+        font-weight: normal;
+      }
+
+      .setosa {
+        background-color: #a6dba0;
+        color: #1a9850;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .versicolor {
+        background-color: #92c5de;
+        color: #0570b0;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .virginica {
+        background-color: #f4a582;
+        color: #ca0020;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Predicted Diamond Price</h1>
+    <div class="results">
+      <span class="label">Estimated Price:</span>
+      <span class="value {{ predict }}">{{ predict }}</span>
+    </div>
+  </body>
+
+</html>

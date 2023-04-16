@@ -1,6 +1,4 @@
 # Basic Import
-import numpy as np
-import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from src.exception.exception import CustomException
 from src.logger.logging import logging
@@ -13,7 +11,7 @@ import os
 
 @dataclass  # Used when we want to create class without init function
 class ModelTrainerConfig:
-    # we are defining path for final model pickel file
+    # we are defining path for final model pickle file
     trained_model_file_path = os.path.join('artifacts', 'model.pkl')
 
 
@@ -58,7 +56,7 @@ class ModelTrainer:
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
-            logging.info("Best Model pickel file saved")
+            logging.info("Best Model pickle file saved")
             print(f"{best_model_name}: {best_model_accuracy}")
             return trained_models_list, r2_accuracy
 

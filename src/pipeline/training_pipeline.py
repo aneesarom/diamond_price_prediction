@@ -11,6 +11,6 @@ if __name__ == '__main__':
     # Data Transformation
     data_transformation = DataTransformation()
     train_arr, test_arr, _ = data_transformation.initaite_data_transformation(train_data_path, test_data_path)
-    # Model Training
+    # Model Training and finding best model
     model_trainer = ModelTrainer()
     model_trainer.initate_model_training(train_arr, test_arr)

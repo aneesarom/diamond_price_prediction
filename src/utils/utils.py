@@ -11,7 +11,7 @@ def save_object(file_path, obj):
         # If directory is not available it will create the folder
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path, exist_ok=True)
-        # To save the pickel file, "wb" string stands for "write binary" mode
+        # To save the pickle file, "wb" string stands for "write binary" mode
         with open(file_path, "wb") as file_obj:
             pickle.dump(obj, file_obj)
     except Exception as e:
@@ -27,4 +27,14 @@ def evaluate_model(X_test, y_test, model):
 
     except Exception as e:
         logging.info('Exception occurred during model evaluating')
+        raise CustomException(e, sys)
+
+
+def load_object(file_path):
+    try:
+        # read the final model pickle file
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info('Exception occurred in load_object function utils')
         raise CustomException(e, sys)

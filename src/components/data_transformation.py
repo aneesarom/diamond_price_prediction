@@ -37,7 +37,7 @@ class DataTransformation:
 
             logging.info('Pipeline Initiated')
 
-            ## Numerical Pipeline
+            # Numerical Pipeline
             num_pipeline = Pipeline(
                 steps=[
                     ('imputer', SimpleImputer(strategy='median')),
@@ -65,7 +65,7 @@ class DataTransformation:
             return preprocessor
 
         except Exception as e:
-            logging.info("Error in Data Trnasformation")
+            logging.info("Error in Data Transformation")
             raise CustomException(e, sys)
 
     def initaite_data_transformation(self, train_path, test_path):
@@ -103,7 +103,7 @@ class DataTransformation:
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
-            # preprocessor obj pickel file is saved in artifacts folder
+            # preprocessor obj pickle file is saved in artifacts folder
             # It contains only column transformer details, it has no transformed array
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
