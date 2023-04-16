@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 
 @dataclass  # Used when we want to create class without init function
-class DataIngestionconfig:
+class DataIngestionConfig:
     # we are defining path for raw data, train data, test data
     train_data_path: str = os.path.join('artifacts', 'train.csv')
     test_data_path: str = os.path.join('artifacts', 'test.csv')
@@ -18,7 +18,7 @@ class DataIngestionconfig:
 class DataIngestion:
     def __init__(self):
         # to create path object
-        self.ingestion_config = DataIngestionconfig()
+        self.ingestion_config = DataIngestionConfig()
 
     def initiate_data_ingestion(self):
         logging.info('Data Ingestion methods Starts')

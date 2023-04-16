@@ -98,13 +98,13 @@ class DataTransformation:
 
             logging.info("Transformed training and testing datasets.")
 
-            # concatinate input and target features by converting target features into array
+            # concatenate input and target features by converting target features into array
             # input feature is numpy array, only target feature is pandas dataframe so we are converting
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
             # preprocessor obj pickel file is saved in artifacts folder
-            # It contains only column trannsoformer details, it has no transformed array
+            # It contains only column transformer details, it has no transformed array
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessing_obj
@@ -119,7 +119,7 @@ class DataTransformation:
             )
 
         except Exception as e:
-            logging.info("Exception occured in the initiate_datatransformation")
+            logging.info("Exception occurred in the initiate_data-transformation")
             raise CustomException(e, sys)
 
 

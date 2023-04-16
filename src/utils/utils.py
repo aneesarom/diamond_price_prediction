@@ -5,6 +5,7 @@ from src.exception.exception import CustomException
 from src.logger.logging import logging
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
+
 def save_object(file_path, obj):
     try:
         # If directory is not available it will create the folder
@@ -15,7 +16,8 @@ def save_object(file_path, obj):
             pickle.dump(obj, file_obj)
     except Exception as e:
         raise CustomException(e, sys)
-    
+
+
 def evaluate_model(X_test, y_test, model):
     try:
         # Predict the testing data
@@ -24,5 +26,5 @@ def evaluate_model(X_test, y_test, model):
         return test_model_score
 
     except Exception as e:
-        logging.info('Exception occured during model evaluating')
+        logging.info('Exception occurred during model evaluating')
         raise CustomException(e, sys)
