@@ -31,7 +31,6 @@ def new_prediction():
     z = float(request.form["z"])
     data = CustomData(carat=carat, color=color, depth=depth, table=table, clarity=clarity, cut=cut, x=x, y=y, z=z)
     df = data.get_data_as_dataframe()
-    print(df)
     model = PredictPipeline()
     prediction = model.predict(df)
     return render_template("result.html", predict=str(round(prediction[0], 2)))

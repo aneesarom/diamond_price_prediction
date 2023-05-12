@@ -22,7 +22,7 @@ class ModelTrainer:
 
     def initate_model_training(self, train_array, test_array):
         try:
-            # split the train test data
+            # split the train test array
             X_train, y_train, X_test, y_test = train_array[:, :-1], train_array[:, -1], test_array[:, :-1], test_array[:, -1]
             logging.info('Split Dependent and Independent variables from train and test data')
 
