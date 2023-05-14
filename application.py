@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 from src.pipeline.prediction_pipeline import CustomData, PredictPipeline
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 categorical_cols = ['cut', 'color', 'clarity']
 numerical_cols = ['carat', 'depth', 'table', 'x', 'y', 'z']
@@ -37,4 +38,4 @@ def new_prediction():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0")
