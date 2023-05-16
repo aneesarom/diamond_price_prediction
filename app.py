@@ -16,6 +16,7 @@ drop_down_order = [cut_categories, color_categories, clarity_categories]
 
 @app.route("/")
 def index():
+    print("Hello, world!")
     return render_template("index.html", col=columns, drop_down_order=drop_down_order, categorical_cols=categorical_cols, enumerate=enumerate)
 
 
