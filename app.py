@@ -4,8 +4,6 @@ from src.pipeline.prediction_pipeline import CustomData, PredictPipeline
 application = Flask(__name__)
 app = application
 
-
-
 categorical_cols = ['cut', 'color', 'clarity']
 numerical_cols = ['carat', 'depth', 'table', 'x', 'y', 'z']
 
