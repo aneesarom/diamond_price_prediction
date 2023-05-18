@@ -13,7 +13,6 @@ color_categories = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
 clarity_categories = ['I1', 'SI2', 'SI1', 'VS2', 'VS1', 'VVS2', 'VVS1', 'IF']
 drop_down_order = [cut_categories, color_categories, clarity_categories]
 
-
 @app.route("/")
 def index():
     print("Hello, world!")
